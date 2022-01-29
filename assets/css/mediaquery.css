@@ -2,9 +2,15 @@
     .aside{
         display: none;
     }
+
+    .main-content{
+        margin:  60px 0;
+    }
+
     .content{
         display: block;
         margin: 0 auto;
+        padding: 0;
     }
 
     .post-list li{
@@ -14,17 +20,24 @@
     }
 
     .post-list .posts{
-         width: 90vw;
+         width: 95%;
+        margin:5px 0;
     }
 
     .stories-box{
-        width: 90vw;
+        margin-top: 0;
+        width: 100%;
+    }
+
+    #left-arrow,#right-arrow{
+        display: none;
     }
 
     .header-img{
-      justify-content: unset !important;
-      margin-left: 15px;
+      justify-content: center;
     }
+
+   
 
     .header-search{
         display: none !important;
@@ -35,6 +48,26 @@
         align-content: center;
     }
 
+    
+
+    .header-nav{
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: #fff;
+    }
+
+    .header-lista{
+        justify-content: center;
+    }
+
+    .header-lista li{
+        flex: 1;
+    }
+
+    .header-lista li:last-child{
+        display: none;
+    }
 
     .post-stats img{
         width: 6%;
