@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/script.js" defer></script>
+    <title>Clone Instagram</title>
+</head>
+<body>
+    <div class="searches-container">
+        <div class="searches">
+            <div class="searches-results">
+                <div class="searches-header">
+                    <p>Recentes</p>
+                    <a href="#" id="clear_searches">Limpar tudo</a>
+                </div>
+                <ul class="searches-lista">
+                    <li>
+                        <div>
+                            <img id="img-results" src="https://avatars.githubusercontent.com/cleytonjesus07" alt="imagem perfil">
+                        </div>
+                        <div>
+                            <h5>cleyton_jesus07</h5>
+                            <p>Cleyton Jesus <span>Seguindo</span></p> 
+                        </div>
+                        <button>X</button>
+                    </li>
+                    <li>
+                        <div>
+                            <img id="img-results" src="./assets/images/joker.jpg" alt="imagem perfil">
+                        </div>
+                        <div>
+                            <h5>Akira_Kurusu</h5>
+                            <p>Joker from Persona 5 <span>Seg...</span></p> 
+                        </div>
+                        <button>X</button>
+                    </li>
+                    <li>
+                        <div>
+                            <img id="img-results" src="./assets/images/ryuji.jpg" alt="imagem perfil">
+                        </div>
+                        <div>
+                            <h5>Ryuji_Sakamoto</h5>
+                            <p>Skull from Persona 5 <span>Seg...</span></p> 
+                        </div>
+                        <button>X</button>
+                    </li>
+                    <li>
+                        <div>
+                            <img id="img-results" src="./assets/images/morgana.jpg" alt="imagem perfil">
+                        </div>
+                        <div>
+                            <h5>Morgana</h5>
+                            <p>Mona from Persona 5 <span>Seg...</span></p> 
+                        </div>
+                        <button>X</button>
+                    </li>
+                    <li>
+                        <div>
+                            <img id="img-results" src="./assets/images/fox.jpg" alt="imagem perfil">
+                        </div>
+                        <div>
+                            <h5>Yusuke_Kitagawa</h5>
+                            <p>Fox from Persona 5 <span>Seg...</span></p> 
+                        </div>
+                        <button>X</button>
+                    </li>
+                    <li>
+                        <div>
+                            <img id="img-results" src="./assets/images/haru.jpg" alt="imagem perfil">
+                        </div>
+                        <div>
+                            <h5>Haru_Okumura</h5>
+                            <p>Noir from Persona 5 <span>Seg...</span></p> 
+                        </div>
+                        <button>X</button>
+                    </li>
+                    <li>
+                        <div>
+                            <img id="img-results" src="./assets/images/makoto.jpg" alt="imagem perfil">
+                        </div>
+                        <div>
+                            <h5>Makoto_Niijima</h5>
+                            <p>Queen from Persona 5 <span>Se...</span></p> 
+                        </div>
+                        <button>X</button>
+                    </li>
+                    <li>
+                        <div>
+                            <img id="img-results" src="./assets/images/ann.jpg" alt="imagem perfil">
+                        </div>
+                        <div>
+                            <h5>Ann_Takamaki</h5>
+                            <p>Panther from Persona 5 <span>Se...</span></p> 
+                        </div>
+                        <button>X</button>
+                    </li>
+                    <li>
+                        <div>
+                            <img id="img-results" src="./assets/images/futaba.jpg" alt="imagem perfil">
+                        </div>
+                        <div>
+                            <h5>Futaba_Sakura</h5>
+                            <p>Oracle from Persona 5 <span>Se...</span></p> 
+                        </div>
+                        <button>X</button>
+                    </li>
+                    <li>
+                        <div>
+                            <img id="img-results" src="./assets/images/sae.png" alt="imagem perfil">
+                        </div>
+                        <div>
+                            <h5>Sae_Nijima</h5>
+                            <p>Public Prosecutor from Per...</p> 
+                        </div>
+                        <button>X</button>
+                    </li>
+                    <li>
+                        <div>
+                            <img id="img-results" src="./assets/images/sojiro.png" alt="imagem perfil">
+                        </div>
+                        <div>
+                            <h5>Sojiro_Sakura</h5>
+                            <p>Leblanc Coffee shop owner...</p> 
+                        </div>
+                        <button>X</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="container-loading">
+                <span class="loading"></span>
+            </div>
+      </div>
+    </div>
+    <header class="header">
+        <div class="header-img">
+            <img src="./assets/images/logo.png" alt="logo do instagram">
+        </div>
+        <div class="header-search">
+            <input type="search" placeholder="Pesquisar" id="search" >
+            <div class="search-decor">
+                <div class="decor-svg">
+                    <svg aria-label="Pesquisar" class="_8-yf5 " color="#8e8e8e" fill="#8e8e8e" height="16" role="img" viewBox="0 0 24 24" width="16"><path d="M19 10.5A8.5 8.5 0 1110.5 2a8.5 8.5 0 018.5 8.5z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="16.511" x2="22" y1="16.511" y2="22"></line></svg>
+                </div>
+                <div>
+                    <span id="search-span">Pesquisar</span>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="header-nav">
+            <ul class="header-lista">
+                <li>
+                    <a href="#">
+                        <svg aria-label="Página inicial" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M22 23h-6.001a1 1 0 01-1-1v-5.455a2.997 2.997 0 10-5.993 0V22a1 1 0 01-1 1H2a1 1 0 01-1-1V11.543a1.002 1.002 0 01.31-.724l10-9.543a1.001 1.001 0 011.38 0l10 9.543a1.002 1.002 0 01.31.724V22a1 1 0 01-1 1z"></path></svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg id="messenger" aria-label="Messenger" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M12.003 2.001a9.705 9.705 0 110 19.4 10.876 10.876 0 01-2.895-.384.798.798 0 00-.533.04l-1.984.876a.801.801 0 01-1.123-.708l-.054-1.78a.806.806 0 00-.27-.569 9.49 9.49 0 01-3.14-7.175 9.65 9.65 0 0110-9.7z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="1.739"></path><path d="M17.79 10.132a.659.659 0 00-.962-.873l-2.556 2.05a.63.63 0 01-.758.002L11.06 9.47a1.576 1.576 0 00-2.277.42l-2.567 3.98a.659.659 0 00.961.875l2.556-2.049a.63.63 0 01.759-.002l2.452 1.84a1.576 1.576 0 002.278-.42z" fill-rule="evenodd"></path></svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg aria-label="Nova publicação" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M2 12v3.45c0 2.849.698 4.005 1.606 4.944.94.909 2.098 1.608 4.946 1.608h6.896c2.848 0 4.006-.7 4.946-1.608C21.302 19.455 22 18.3 22 15.45V8.552c0-2.849-.698-4.006-1.606-4.945C19.454 2.7 18.296 2 15.448 2H8.552c-2.848 0-4.006.699-4.946 1.607C2.698 4.547 2 5.703 2 8.552z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="6.545" x2="17.455" y1="12.001" y2="12.001"></line><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="12.003" x2="12.003" y1="6.545" y2="17.455"></line></svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg aria-label="Encontrar pessoas" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><polygon fill="none" points="13.941 13.953 7.581 16.424 10.06 10.056 16.42 7.585 13.941 13.953" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polygon><polygon fill-rule="evenodd" points="10.06 10.056 13.949 13.945 7.581 16.424 10.06 10.056"></polygon><circle cx="12.001" cy="12.005" fill="none" r="10.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></circle></svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg aria-label="Feed de atividades" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M16.792 3.904A4.989 4.989 0 0121.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 014.708-5.218 4.21 4.21 0 013.675 1.941c.84 1.175.98 1.763 1.12 1.763s.278-.588 1.11-1.766a4.17 4.17 0 013.679-1.938m0-2a6.04 6.04 0 00-4.797 2.127 6.052 6.052 0 00-4.787-2.127A6.985 6.985 0 00.5 9.122c0 3.61 2.55 5.827 5.015 7.97.283.246.569.494.853.747l1.027.918a44.998 44.998 0 003.518 3.018 2 2 0 002.174 0 45.263 45.263 0 003.626-3.115l.922-.824c.293-.26.59-.519.885-.774 2.334-2.025 4.98-4.32 4.98-7.94a6.985 6.985 0 00-6.708-7.218z"></path></svg>
+                    </a>
+                </li>
+                <li>
+                    <img src="https://avatars.githubusercontent.com/cleytonjesus07" alt="imagem perfil">
+                </li>
+            </ul>
+        </nav>
+    </header>
+     <main class="main-content">
+         <div class="content">
+            <div class="stories-box">
+                <span id="left-arrow"></span>
+               
+                <ul>
+                    <li>
+                        <div>
+                            <img src="./assets/images/joker.jpg" alt="">
+                            <span>Akira_kurusu</span>    
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="./assets/images/haru.jpg" alt="">
+                            <span>Haru_Okumura</span>    
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="./assets/images/fox.jpg" alt="">
+                            <span>Yusuke_Kitagawa</span>    
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="./assets/images/morgana.jpg" alt="">
+                            <span>Morgana</span>    
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="./assets/images/ryuji.jpg" alt="">
+                            <span>Ryuji_Sakamoto</span>    
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="./assets/images/futaba.jpg" alt="">
+                            <span>Futaba_Sakura</span>    
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="./assets/images/ann.jpg" alt="">
+                            <span>Ann_Takamaki</span>    
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="./assets/images/makoto.jpg" alt="">
+                            <span>Makoto_Niijima</span>    
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="./assets/images/sae.png" alt="">
+                            <span>Sae_Nijima</span>    
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="./assets/images/sojiro.png" alt="">
+                            <span>Sojiro_Sakura</span>    
+                        </div>
+                    </li>
+                    
+                </ul>
+                <span id="right-arrow"></span>
+            </div>
+            <!-- POSTS -->
+                <ul class="post-list">
+                    <li>
+                        <div class="posts">
+                        <div class="post-header">
+                            <div>
+                                <img id="img-results" src="./assets/images/makoto.jpg" alt="imagem perfil">
+                            </div>
+                            <div>
+                                <h5>Makoto_Niijima</h5>
+                                <p>Sis's House</p> 
+                            </div>
+                            <span>•••</span>
+                        </div>
+                        <div class="post-content">
+                            <img src="./assets/images/makoto.jpg" alt="">
+                        </div>
+                        <div class="post-opts">
+                            <div>
+                                <svg aria-label="Curtir" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M16.792 3.904A4.989 4.989 0 0121.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 014.708-5.218 4.21 4.21 0 013.675 1.941c.84 1.175.98 1.763 1.12 1.763s.278-.588 1.11-1.766a4.17 4.17 0 013.679-1.938m0-2a6.04 6.04 0 00-4.797 2.127 6.052 6.052 0 00-4.787-2.127A6.985 6.985 0 00.5 9.122c0 3.61 2.55 5.827 5.015 7.97.283.246.569.494.853.747l1.027.918a44.998 44.998 0 003.518 3.018 2 2 0 002.174 0 45.263 45.263 0 003.626-3.115l.922-.824c.293-.26.59-.519.885-.774 2.334-2.025 4.98-4.32 4.98-7.94a6.985 6.985 0 00-6.708-7.218z"></path></svg><svg aria-label="Comentar" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M20.656 17.008a9.993 9.993 0 10-3.59 3.615L22 22z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></path></svg>
+                                <svg aria-label="Compartilhar publicação" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2" x1="22" x2="9.218" y1="3" y2="10.083"></line><polygon fill="none" points="11.698 20.334 22 3.001 2 3.001 9.218 10.084 11.698 20.334" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></polygon></svg>
+                            </div>
+                            <svg aria-label="Salvar" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><polygon fill="none" points="20 21 12 13.44 4 21 4 3 20 3 20 21" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polygon></svg>
+                        </div>
+                        <div class="post-stats">
+                            <img src="./assets/images/sae.png" alt=""> 
+                            <p>Curtido por <span>Sae_Nijima</span> e <span>outras 70.000 pessoas</span></p>
+                        </div>
+                        <div class="post-desc">
+                            <h5>Makoto_Niijima</h5>
+                            <p>Aviso à todos que haverá os exames finais amanhã. PS: CUIDADO @Ryuji_Sakamoto.</p>
+                        </div>
+                        <div class="post-comments">
+                            <span>Ver todos os 100.000 comentários</span>
+                            <ul>
+                                <li>
+                                    <h5>Ryuji_Sakamoto</h5>
+                                    <p>JÁÁ??!!!😭</p>
+                                </li>
+                                <li>
+                                    <h5>Makoto_Niijima</h5>
+                                    <p>@Ryuji_Sakamoto Estude para não ser reprovado novamente.</p>
+                                </li>
+                                <li>
+                                    <h5>Ann_Takamaki</h5>
+                                    <p>@Makoto_Niijima Podemos nos reunir para estudarmos?</p>
+                                </li>
+                                <li>
+                                    <h5>Makoto_Niijima</h5>
+                                    <p>@Ann_Takamaki Pode ser no café Leblanc, tudo bem para você, @Akira_Kurusu?</p>
+                                </li>
+                                <li>
+                                    <h5>Akira_Kurusu</h5>
+                                    <p>@Makoto_Niijima Perfeitamente.</p>
+                                </li>
+                            </ul>
+                            <span class="date">Há 1 Minuto</span>
+                        </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="posts">
+                        <div class="post-header">
+                            <div>
+                                <img id="img-results" src="./assets/images/fox.jpg" alt="imagem perfil">
+                            </div>
+                            <div>
+                                <h5>Yusuke_Kitagawa</h5>
+                                <p>Fox's Atêlier</p> 
+                            </div>
+                            <span>•••</span>
+                        </div>
+                        <div class="post-content">
+                            <img src="./assets/images/fox.jpg" alt="">
+                        </div>
+                        <div class="post-opts">
+                            <div>
+                                <svg aria-label="Curtir" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M16.792 3.904A4.989 4.989 0 0121.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 014.708-5.218 4.21 4.21 0 013.675 1.941c.84 1.175.98 1.763 1.12 1.763s.278-.588 1.11-1.766a4.17 4.17 0 013.679-1.938m0-2a6.04 6.04 0 00-4.797 2.127 6.052 6.052 0 00-4.787-2.127A6.985 6.985 0 00.5 9.122c0 3.61 2.55 5.827 5.015 7.97.283.246.569.494.853.747l1.027.918a44.998 44.998 0 003.518 3.018 2 2 0 002.174 0 45.263 45.263 0 003.626-3.115l.922-.824c.293-.26.59-.519.885-.774 2.334-2.025 4.98-4.32 4.98-7.94a6.985 6.985 0 00-6.708-7.218z"></path></svg><svg aria-label="Comentar" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M20.656 17.008a9.993 9.993 0 10-3.59 3.615L22 22z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></path></svg>
+                                <svg aria-label="Compartilhar publicação" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2" x1="22" x2="9.218" y1="3" y2="10.083"></line><polygon fill="none" points="11.698 20.334 22 3.001 2 3.001 9.218 10.084 11.698 20.334" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></polygon></svg>
+                            </div>
+                            <svg aria-label="Salvar" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><polygon fill="none" points="20 21 12 13.44 4 21 4 3 20 3 20 21" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polygon></svg>
+                        </div>
+                        <div class="post-stats">
+                            <img src="./assets/images/futaba.jpg" alt=""> 
+                            <p>Curtido por <span>Futaba_Sakura</span> e <span>outras 9.900 pessoas</span></p>
+                        </div>
+                        <div class="post-desc">
+                            <h5>Yusuke_Kitagawa</h5>
+                            <p>Convidos todos a virem ver minha expedição de arte.</p>
+                        </div>
+                        <div class="post-comments">
+                            <span>Ver todos os 20.000 comentários</span>
+                            <ul>
+                                <li>
+                                    <h5>Ryuji_Sakamoto</h5>
+                                    <p>AH NÃO!!! Expedição DE NOVO!!!😭😭😭</p>
+                                </li>
+                                <li>
+                                    <h5>Yusuke_Kitagawa</h5>
+                                    <p>@Ryuji_Sakamoto, simplesmente não compareça.</p>
+                                </li>
+                                <li>
+                                    <h5>Ann_Takamaki</h5>
+                                    <p>🤣🤣@Ryuji_Sakamoto, Tomou, Ryuji?🤣🤣.</p>
+                                </li>
+                                <li>
+                                    <h5>Ryuji_Sakamoto</h5>
+                                    <p>@Yusuke_Kitagawa, Olha só a ousadia do garoto!😮</p>
+                                </li>
+                            </ul>
+                            <span class="date">Há 1 Minuto</span>
+                        </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="posts">
+                        <div class="post-header">
+                            <div>
+                                <img id="img-results" src="./assets/images/ryuji.jpg" alt="imagem perfil">
+                            </div>
+                            <div>
+                                <h5>Ryuji_Sakamoto</h5>
+                                <p>Hideout</p> 
+                            </div>
+                            <span>•••</span>
+                        </div>
+                        <div class="post-content">
+                            <img src="./assets/images/ryuji.jpg" alt="">
+                        </div>
+                        <div class="post-opts">
+                            <div>
+                                <svg aria-label="Curtir" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M16.792 3.904A4.989 4.989 0 0121.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 014.708-5.218 4.21 4.21 0 013.675 1.941c.84 1.175.98 1.763 1.12 1.763s.278-.588 1.11-1.766a4.17 4.17 0 013.679-1.938m0-2a6.04 6.04 0 00-4.797 2.127 6.052 6.052 0 00-4.787-2.127A6.985 6.985 0 00.5 9.122c0 3.61 2.55 5.827 5.015 7.97.283.246.569.494.853.747l1.027.918a44.998 44.998 0 003.518 3.018 2 2 0 002.174 0 45.263 45.263 0 003.626-3.115l.922-.824c.293-.26.59-.519.885-.774 2.334-2.025 4.98-4.32 4.98-7.94a6.985 6.985 0 00-6.708-7.218z"></path></svg><svg aria-label="Comentar" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M20.656 17.008a9.993 9.993 0 10-3.59 3.615L22 22z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></path></svg>
+                                <svg aria-label="Compartilhar publicação" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2" x1="22" x2="9.218" y1="3" y2="10.083"></line><polygon fill="none" points="11.698 20.334 22 3.001 2 3.001 9.218 10.084 11.698 20.334" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></polygon></svg>
+                            </div>
+                            <svg aria-label="Salvar" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><polygon fill="none" points="20 21 12 13.44 4 21 4 3 20 3 20 21" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polygon></svg>
+                        </div>
+                        <div class="post-stats">
+                            <img src="./assets/images/makoto.jpg" alt=""> 
+                            <p>Curtido por <span>Makoto_Niijima</span> e <span>outras 2.500 pessoas</span></p>
+                        </div>
+                        <div class="post-desc">
+                            <h5>Ryuji_Sakamoto</h5>
+                            <p>***Insira uma legenda***</p>
+                        </div>
+                        <div class="post-comments">
+                            <span>Ver todos os 9.000 comentários</span>
+                            <ul>
+                                <li>
+                                    <h5>Ryuji_Sakamoto</h5>
+                                    <p>O mais poderoso da turma e inteligente!</p>
+                                </li>
+                                <li>
+                                    <h5>Makoto_Niijima</h5>
+                                    <p>🤣🤣🤣Hahaha.🤣🤣🤣</p>
+                                </li>
+                                <li>
+                                    <h5>Morgana</h5>
+                                    <p>Legenda: Nota 0 como de costume.🤣🤣🤣</p>
+                                </li>
+                                <li>
+                                    <h5>Ryuji_Sakamoto</h5>
+                                    <p>@Morgana Quem foi que lhe chamou aqui, heim?</p>
+                                </li>
+                            </ul>
+                            <span class="date">Há 1 Minuto</span>
+                        </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="posts">
+                        <div class="post-header">
+                            <div>
+                                <img id="img-results" src="./assets/images/futaba.jpg" alt="imagem perfil">
+                            </div>
+                            <div>
+                                <h5>Futaba_Sakura</h5>
+                                <p>Leblanc Coffee shop</p> 
+                            </div>
+                            <span>•••</span>
+                        </div>
+                        <div class="post-content">
+                            <img src="./assets/images/morgana.jpg" alt="">
+                        </div>
+                        <div class="post-opts">
+                            <div>
+                                <svg aria-label="Curtir" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M16.792 3.904A4.989 4.989 0 0121.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 014.708-5.218 4.21 4.21 0 013.675 1.941c.84 1.175.98 1.763 1.12 1.763s.278-.588 1.11-1.766a4.17 4.17 0 013.679-1.938m0-2a6.04 6.04 0 00-4.797 2.127 6.052 6.052 0 00-4.787-2.127A6.985 6.985 0 00.5 9.122c0 3.61 2.55 5.827 5.015 7.97.283.246.569.494.853.747l1.027.918a44.998 44.998 0 003.518 3.018 2 2 0 002.174 0 45.263 45.263 0 003.626-3.115l.922-.824c.293-.26.59-.519.885-.774 2.334-2.025 4.98-4.32 4.98-7.94a6.985 6.985 0 00-6.708-7.218z"></path></svg><svg aria-label="Comentar" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M20.656 17.008a9.993 9.993 0 10-3.59 3.615L22 22z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></path></svg>
+                                <svg aria-label="Compartilhar publicação" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2" x1="22" x2="9.218" y1="3" y2="10.083"></line><polygon fill="none" points="11.698 20.334 22 3.001 2 3.001 9.218 10.084 11.698 20.334" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></polygon></svg>
+                            </div>
+                            <svg aria-label="Salvar" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><polygon fill="none" points="20 21 12 13.44 4 21 4 3 20 3 20 21" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polygon></svg>
+                        </div>
+                        <div class="post-stats">
+                            <img src="./assets/images/morgana.jpg" alt=""> 
+                            <p>Curtido por <span>Morgana</span> e <span>outras 2.000 pessoas</span></p>
+                        </div>
+                        <div class="post-desc">
+                            <h5>Futaba_Sakura</h5>
+                            <p>Mona Mona!🐱</p>
+                        </div>
+                        
+                        <div class="post-comments">
+                            <span>Ver todos os 700 comentários</span>
+                            <ul>
+                                <li>
+                                    <h5>Morgana</h5>
+                                    <p>Prestem atenção no estilo. 😼</p>
+                                </li>
+                                <li>
+                                    <h5>Ann_Takamaki</h5>
+                                    <p>Exibido. 😒</p>
+                                </li>
+                                <li>
+                                    <h5>Ryuji_Sakamoto</h5>
+                                    <p>😆😆@Futaba_Sakura, melhor guia!😆😆</p>
+                                </li>
+                                <li>
+                                    <h5>Morgana</h5>
+                                    <p>🤬!!!CALE A BOCA, @Ryuji_Sakamoto!!!.🤬</p>
+                                </li>
+                            </ul>
+                            <span class="date">Há 1 Minuto</span>
+                        </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="posts">
+                        <div class="post-header">
+                            <div>
+                                <img id="img-results" src="./assets/images/futaba.jpg" alt="imagem perfil">
+                            </div>
+                            <div>
+                                <h5>Futaba_Sakura</h5>
+                                <p>Leblanc Coffee shop</p> 
+                            </div>
+                            <span>•••</span>
+                        </div>
+                        <div class="post-content">
+                            <img src="./assets/images/futaba.jpg" alt="">
+                        </div>
+                        <div class="post-opts">
+                            <div>
+                                <svg aria-label="Curtir" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M16.792 3.904A4.989 4.989 0 0121.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 014.708-5.218 4.21 4.21 0 013.675 1.941c.84 1.175.98 1.763 1.12 1.763s.278-.588 1.11-1.766a4.17 4.17 0 013.679-1.938m0-2a6.04 6.04 0 00-4.797 2.127 6.052 6.052 0 00-4.787-2.127A6.985 6.985 0 00.5 9.122c0 3.61 2.55 5.827 5.015 7.97.283.246.569.494.853.747l1.027.918a44.998 44.998 0 003.518 3.018 2 2 0 002.174 0 45.263 45.263 0 003.626-3.115l.922-.824c.293-.26.59-.519.885-.774 2.334-2.025 4.98-4.32 4.98-7.94a6.985 6.985 0 00-6.708-7.218z"></path></svg><svg aria-label="Comentar" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M20.656 17.008a9.993 9.993 0 10-3.59 3.615L22 22z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></path></svg>
+                                <svg aria-label="Compartilhar publicação" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2" x1="22" x2="9.218" y1="3" y2="10.083"></line><polygon fill="none" points="11.698 20.334 22 3.001 2 3.001 9.218 10.084 11.698 20.334" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></polygon></svg>
+                            </div>
+                            <svg aria-label="Salvar" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><polygon fill="none" points="20 21 12 13.44 4 21 4 3 20 3 20 21" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polygon></svg>
+                        </div>
+                        <div class="post-stats">
+                            <img src="./assets/images/joker.jpg" alt=""> 
+                            <p>Curtido por <span>Akira_Kurusu</span> e <span>outras 500 pessoas</span></p>
+                        </div>
+                        <div class="post-desc">
+                            <h5>Futaba_Sakura</h5>
+                            <p>😄😄😄Nova foto de perfil😄😄😄</p>
+                        </div>
+                        
+                        <div class="post-comments">
+                            <span>Ver todos os 100 comentários</span>
+                            <ul>
+                                <li>
+                                    <h5>Akira_Kurusu</h5>
+                                    <p>Foto bacana! Futaba. :)</p>
+                                </li>
+                                <li>
+                                    <h5>Ann_Takamaki</h5>
+                                    <p>Isso aí, Futaba. 🥰</p>
+                                </li>
+                                <li>
+                                    <h5>Sojiro_Sakura</h5>
+                                    <p>Minha filha querida. 🥰</p>
+                                </li>
+                            </ul>
+                            <span class="date">Há 1 hora</span>
+                        </div>
+                        </div>
+                    </li>
+                    
+                </ul>
+            </div>
+         </div>
+      <aside class="aside">
+        <div class="aside-content">
+            <a href="https://cleytonjesus07.github.io/LinkToLinktree/" target="_blank">
+                <div class="content-header">
+                    <img src="https://avatars.githubusercontent.com/cleytonjesus07" alt="">
+                    <div>
+                        <h5>cleyton_jesus07</h5>
+                        <p>Cleyton Jesus</p>
+                    </div>
+                </div>
+            </a>
+            <div class="top-list">
+                <h5>Sugestões para você</h5>
+                <span>Ver tudo</span>
+            </div>
+            <ul class="suggestion">
+                <li>
+                    <img src="./assets/images/makoto.jpg" alt="">
+                    <div>
+                        <h5>Makoto_FanBase</h5>
+                        <p>Seguido por Makoto_Niij...</p>
+                    </div>
+                    <span>Seguir</span>
+                </li>
+                <li>
+                    <img src="./assets/images/morgana.jpg" alt="">
+                    <div>
+                        <h5>Morgana's Club</h5>
+                        <p>Seguido por Morgana e m...</p>
+                    </div>
+                    <span>Seguir</span>
+                </li>
+                <li>
+                    <img src="./assets/images/fox.jpg" alt="">
+                    <div>
+                        <h5>Fox's Atêlier</h5>
+                        <p>Seguido por Yusuke_Kita...</p>
+                    </div>
+                    <span>Seguir</span>
+                </li>
+                <li>
+                    <img src="./assets/images/joker.jpg" alt="">
+                    <div>
+                        <h5>Joker_Quotes</h5>
+                        <p>Seguido por Joker<p>
+                    </div>
+                    <span>Seguir</span>
+                </li>
+                <li>
+                    <img src="./assets/images/ryuji.jpg" alt="">
+                    <div>
+                        <h5>Skull's dinasty</h5>
+                        <p>Seguido por Ryuji_Sakamo...</p>
+                    </div>
+                    <span>Seguir</span>
+                </li>
+            </ul>
+            <footer class="footer">
+                <ul>
+                    <li>Sobre</li>
+                    <li>Ajuda</li>
+                    <li>Imprensa</li>
+                    <li>API</li>
+                    <li>Carreiras</li>
+                    <li>Privacidade</li>
+                    <li>Termos</li>
+                    <li>Localizações</li>
+                    <li>Principais contas</li>
+                    <li>Hashtags</li>
+                    <li>Idioma</li>
+                </ul>
+                <span>© 2022 Clone Instagram</span>
+            </footer>
+        </div>
+      
+      </aside>
+     </main>
+</body>
+</html>

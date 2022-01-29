@@ -1,0 +1,401 @@
+.main-content{
+    margin-top: 60px;
+    display: flex;
+    background-color: #FAFAFA;
+    width: 100%;
+    flex-direction: row-reverse;
+    min-height: calc(100vh - 60px);
+}
+
+.aside{
+    position: fixed;
+    width: 500px;
+    height: calc(100vh - 60px);
+    
+    padding: 20px 0;
+}
+
+.top-list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-list h5{
+    color: rgb(163, 163, 163);
+    font-weight: 500;
+}
+
+.top-list span{
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.aside-content{
+    width: 300px;
+   
+    padding: 10px;
+}
+
+.aside-content img{
+    width: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.content-header{
+    display: flex;
+    align-items: center;
+    height: 110px;
+}
+
+.content-header h5{
+    font-weight: 500;
+}
+
+.content-header p{
+    color: rgb(163, 163, 163);
+    font-size: 14px;
+}
+
+.content{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex: 1;
+    margin-right:500px;
+   
+}
+
+/* Suggestion list */
+
+.suggestion{
+    margin-top: 10px;
+}
+
+.suggestion li{
+    display: flex;
+    align-items: center;
+    padding: 5px ;
+    justify-content: space-around;
+}
+
+.suggestion li > *{
+    flex: 1;
+}
+
+.suggestion li > div{
+    flex: 9;
+}
+
+.suggestion img{
+    width: 40px;
+}
+
+.suggestion h5{
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.suggestion h5:hover{
+    text-decoration: underline;
+}
+
+.suggestion p{
+    font-size: 14px;
+    color: rgb(163, 163, 163);
+}
+
+.suggestion span {
+    font-size: 12px;
+    font-weight: bold;
+    color: #0F9BF6;
+cursor: pointer;
+}
+
+
+
+
+
+/* Stories */
+
+.stories-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    background-color: #fff;
+    border: 1px solid rgb(220, 220, 220);
+    width: 600px;
+
+    height: 140px;
+    border-radius: 5px;
+    box-shadow: 0 0 1px rgb(197, 197, 197);
+}
+
+.stories-box ul{
+    position: absolute;
+    scroll-behavior: smooth;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+    overflow-x: auto;
+}
+
+.stories-box ul::-webkit-scrollbar{
+ height: 0px;
+}
+
+.stories-box ul li{
+    margin: 0 13px;
+    
+    display: block;
+    flex-direction: column;
+    padding: 3px;
+    background-image: url("../images/ring.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.stories-box div{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+.stories-box span{
+    position: absolute;
+    bottom: 0;
+    font-size: 11px;
+    margin-bottom: -20px;
+}
+
+.stories-box img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+/* Arrows */
+#left-arrow{
+ left: 5px;
+ visibility: hidden;
+}
+#right-arrow{
+    right: 5px;
+}
+#left-arrow::after{
+ content: "<";
+}
+#right-arrow::after{
+    content: ">";
+}
+
+#left-arrow,#right-arrow{
+  z-index: 1;
+    flex: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+   width: 10px;
+   height: 10px;
+   padding: 12px;
+   border-radius: 50%;
+   background-color: #fff;   
+   border: rgb(197, 197, 197) 1px solid;
+   cursor: pointer;
+   font-weight: bold;
+   font-size: 12px; 
+}
+
+/* Footer */
+
+.footer ul{
+    display: flex;
+    color: rgb(194, 194, 194);
+    font-size: 11px;
+    flex-wrap: wrap;
+}
+
+.footer li{
+    margin:  2px;
+    cursor: pointer;
+}
+.footer li::before{
+    content: "• ";
+}
+
+.footer li:first-child::before{
+    content: " ";
+}
+
+.footer span{
+    font-size: 12px;
+    color: rgb(194, 194, 194);
+}
+
+/* posts */
+
+.posts{
+    overflow: hidden;
+    border-radius: 3px;
+    margin: 30px 0;
+    width: 600px;
+    box-shadow: 0 0 2px rgb(197, 197, 197);
+}
+
+.post-header{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+    height: 50px;
+    padding: 10px;
+}
+
+.post-header > div:nth-child(2){
+    flex: 2;
+}
+
+.post-header h5{
+    font-weight: 500;
+}
+
+.post-header p{
+    font-size: 12px;
+}
+
+.post-header img{
+    margin-right: 10px;
+    width: 35px;
+    border-radius: 50%;
+}
+
+.post-content{
+    object-fit: cover;
+}
+
+.post-content img{
+  width: 100%;
+}
+
+.post-header span{
+    cursor: pointer;
+}
+
+.post-opts{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.post-opts div{
+    display: flex;
+}
+.post-opts div > *{
+    flex: 1;
+    margin: 0 5px;
+}
+
+.post-opts  svg{
+    cursor: pointer;
+}
+
+.post-opts svg:hover{
+    color: rgb(194, 194, 194);
+    fill: rgb(194, 194, 194);
+}
+
+/* Post Stats */
+
+.post-stats{
+    display: flex;
+    margin: 10px;
+}
+
+.post-stats img{
+    border-radius: 50%;
+    margin-right: 10px;
+    width: 20px;
+}
+
+.post-stats p{
+    font-size: 13px;
+}
+
+.post-stats span{
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.post-stats span:nth-of-type(1):hover{
+    text-decoration: underline;
+}
+
+/* Post desc */
+
+.post-desc{
+    
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+.post-desc h5{
+    margin-right: 5px;
+    font-weight: 500;
+}
+
+.post-desc p{
+    font-size: 13px;
+}
+
+/* post comments */
+
+.post-comments{
+    margin: 10px;
+}
+
+.post-comments span{
+    display: block;
+    font-size: 13px;
+    font-weight: 400;
+    color: rgb(119, 119, 119);
+    cursor: pointer;
+    margin: 5px;
+}
+
+.post-comments ul{
+    display: block;
+}
+
+.post-comments ul li{
+    display: flex;
+    justify-content: flex-start;
+    margin: 5px 0;
+}
+
+.post-comments h5{
+    margin-right: 5px;
+    font-weight: 500;
+}
+
+.post-comments p{
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.post-comments .date{
+    margin: 5px 0;
+    display: block;
+    font-size: 10px;
+    text-transform: uppercase;
+}

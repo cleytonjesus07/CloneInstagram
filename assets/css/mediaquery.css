@@ -1,0 +1,44 @@
+@media (max-width:768px) {
+    .aside{
+        display: none;
+    }
+    .content{
+        display: block;
+        margin: 0 auto;
+    }
+
+    .post-list li{
+        display: flex;
+        align-self: center;
+        justify-content: center;
+    }
+
+    .post-list .posts{
+         width: 90vw;
+    }
+
+    .stories-box{
+        width: 90vw;
+    }
+
+    .header-img{
+      justify-content: unset !important;
+      margin-left: 15px;
+    }
+
+    .header-search{
+        display: none !important;
+    }
+
+    .post-stats{
+        justify-content: flex-start;
+        align-content: center;
+    }
+
+
+    .post-stats img{
+        width: 6%;
+        height: 6%;
+    }
+ 
+}
