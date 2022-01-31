@@ -74,6 +74,10 @@
         display: none;
     }
 
+    .notify{
+        right: 15px !important;
+    }
+
     .post-stats img{
         width: 6%;
         height: 6%;

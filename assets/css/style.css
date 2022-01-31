@@ -259,6 +259,7 @@ a {
 }
 
 .header-lista > li {
+  position: relative;
   margin: 0 10px;
 }
 
@@ -269,9 +270,28 @@ a {
   overflow: hidden;
 }
 
-.header-lista > li img {
+.header-lista > li img{
   width: 100%;
 }
+
+
+
+/* Notify */
+
+.notify{
+  position: absolute;
+  display: inline;
+  background-color: red;
+  color: #fff;
+  padding: 3px;
+  border-radius: 50%;
+  font-weight: 400;
+  top: -5px;
+  right: -5px;
+  font-size: 8px;
+}
+
+
 
 /* Loading */
 
@@ -302,3 +322,5 @@ a {
     transform: rotate(360deg);
   }
 }
+
+

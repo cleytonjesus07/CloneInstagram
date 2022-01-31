@@ -344,12 +344,12 @@ cursor: pointer;
 
 .post-desc{
     
-    display: flex;
+    display: block;
     align-items: center;
     margin: 10px;
 }
 
-.post-desc h5{
+.post-desc p span{
     margin-right: 5px;
     font-weight: 500;
 }
