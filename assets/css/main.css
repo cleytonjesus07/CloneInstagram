@@ -342,11 +342,16 @@ cursor: pointer;
 
 /* Post desc */
 
-.post-desc{
-    
-    display: block;
+.post-desc{ 
+    display: -webkit-box;
+    overflow: hidden;
+    width: 90%;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
     align-items: center;
+  
     margin: 10px;
+    
 }
 
 .post-desc p span{
@@ -355,6 +360,7 @@ cursor: pointer;
 }
 
 .post-desc p{
+    
     font-size: 13px;
 }
 
@@ -362,6 +368,7 @@ cursor: pointer;
 
 .post-comments{
     margin: 10px;
+    
 }
 
 .post-comments span{
@@ -391,6 +398,10 @@ cursor: pointer;
 .post-comments p{
     font-size: 13px;
     font-weight: 400;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
 }
 
 .post-comments .date{
